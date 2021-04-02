@@ -22,7 +22,7 @@
  privKey        = var.privKey  <br>
 
 
-#  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secretes for AZ Service Principal
+#  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secrets for AZ Service Principal
 
 # The below envorionment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally, define then as local env variables.  This is the case if you are using PFX certificates for AZ Service Principal
 export ARM_CLIENT_ID="" <br>
