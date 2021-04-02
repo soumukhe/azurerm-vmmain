@@ -1,7 +1,10 @@
-module "azvm" {
-  source = "../child-module"
+module "vmsub" {
+  source  = "soumukhe/vmsub/azurerm"
+  version = "1.0.0"
 
-  # variable usage
+
+
+  # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud)
   resgrp         = var.resgrp   # resource group name
   region         = var.region
   resgrptag      = var.resgrptag
