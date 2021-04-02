@@ -1,12 +1,12 @@
 output "VM_Public_IP" {
-  value = module.azvm.PublicIP
+  value = module.vmsub.PublicIP
 }
 
 output "adminuUser" {
-  value = module.azvm.adminUser
+  value = module.vmsub.adminUser
 }
 
 output "tls_private_key-Name" {
-  value = module.azvm.PrivateKeyName
+  value = module.vmsub.PrivateKeyName
 }
 
