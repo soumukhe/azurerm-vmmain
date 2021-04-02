@@ -3,42 +3,42 @@
 #---------------------
  # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud)
  resgrp         = var.resgrp   # resource group name <br/>
- region         = var.region
- resgrptag      = var.resgrptag
- vnet           = var.vnet
- cidr           = var.cidr # ["10.0.1.0/16"]
- subnetname     = var.subnetname
- subnet         = var.subnet # ["10.0.1.0/24"]
- publicip       = var.publicip
- sgname         = var.sgname
- netIntName     = var.netIntName
- ipName         = var.ipName
- vmName         = var.vmName
- osDiskName     = var.osDiskName
- imagePublisher = var.imagePublisher # "Canonical"
- image          = var.image          # "UbuntuServer"
- imageSku       = var.imageSku       # "18.04-LTS"
- adminUser      = var.adminUser      # "azureuser"
- privKey        = var.privKey
+ region         = var.region <br/>
+ resgrptag      = var.resgrptag <br/>
+ vnet           = var.vnet <br/>
+ cidr           = var.cidr # ["10.0.1.0/16"] <br/>
+ subnetname     = var.subnetname <br/>
+ subnet         = var.subnet # ["10.0.1.0/24"] <br/>
+ publicip       = var.publicip <br/>
+ sgname         = var.sgname <br/>
+ netIntName     = var.netIntName <br/>
+ ipName         = var.ipName <br/>
+ vmName         = var.vmName <br/>
+ osDiskName     = var.osDiskName <br/>
+ imagePublisher = var.imagePublisher # "Canonical" <br/>
+ image          = var.image          # "UbuntuServer" <br/>
+ imageSku       = var.imageSku       # "18.04-LTS" <br/>
+ adminUser      = var.adminUser      # "azureuser" <br/>
+ privKey        = var.privKey  <br/>
 
 
 #  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secretes for AZ Service Principal
 
 # The below envorionment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally, define then as local env variables.  This is the case if you are using PFX certificates for AZ Service Principal
-export ARM_CLIENT_ID=""
-export ARM_CLIENT_CERTIFICATE_PATH=""    # this needs to point to wherever you have the pfx certificate stored in your local machine.  e.g. export ARM_CLIENT_CERTIFICATE_PATH="/home/aciadmin/Terraform/certs/temp/service-principal.pfx"
-export ARM_CLIENT_CERTIFICATE_PASSWORD=""  # this needs to match the password that you entered while creating the PFX certificate.  Please see How to below.  (step 3 on PFX cert creation)
-export ARM_SUBSCRIPTION_ID=""
-export ARM_TENANT_ID="" #  this is the Directory / Tenant ID
+export ARM_CLIENT_ID="" <br/>
+export ARM_CLIENT_CERTIFICATE_PATH=""    # this needs to point to wherever you have the pfx certificate stored in your local machine.  e.g. export ARM_CLIENT_CERTIFICATE_PATH="/home/aciadmin/Terraform/certs/temp/service-principal.pfx" <br/>
+export ARM_CLIENT_CERTIFICATE_PASSWORD=""  # this needs to match the password that you entered while creating the PFX certificate.  Please see How to below.  (step 3 on PFX cert creation) <br/>
+export ARM_SUBSCRIPTION_ID="" <br/>
+export ARM_TENANT_ID="" #  this is the Directory / Tenant ID <br/>
 
 # OR
 
 
 # The Below environment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally,define as local env variables.  This is the case if you are using client certificates for AZ Service Principal
-export ARM_CLIENT_ID=""
-export ARM_CLIENT_SECRET=""
-export ARM_TENANT_ID=""
-export ARM_SUBSCRIPTION_ID=""
+export ARM_CLIENT_ID="" <br/>
+export ARM_CLIENT_SECRET="" <br/>
+export ARM_TENANT_ID="" <br/>
+export ARM_SUBSCRIPTION_ID="" <br/>
 
 
 #  How to create PFX certificate or how to create client certificate in Azure for Service Principal
@@ -61,16 +61,16 @@ Enter Export Password:
                  for example: Password123
 
 	4) Now on AZ console go to Active Directory/App Registeration/New Registeration
-Put in some name:  Terraform1  # Terraform1 is just an example, choose whatever you want it to be
-Who can use:  Choose Single Tenant
-Redirect URI:  Keep to WEB
+Put in some name:  Terraform1  # Terraform1 is just an example, choose whatever you want it to be <br/>
+Who can use:  Choose Single Tenant <br/>
+Redirect URI:  Keep to WEB <br/>
 
-hit Register
+hit Register <br/>
 
-Now you will see the following:
-Application Client ID: blah
-Directory: blah
-Object ID: blah
+Now you will see the following: <br/>
+Application Client ID: blah <br/>
+Directory: blah <br/>
+Object ID: blah <br/>
 
 
 	5) Now go to certificates & secrets and upload the public certificate: service-principal.crt and add that.
