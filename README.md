@@ -80,9 +80,9 @@ Object ID: blah <br>
 
 #Required for Terraform if using Client Secrets: <br>
 #---------------------------------------------------------------- <br>
-	1) az login -u azusername@domain -p blah  (or just az login)
-	2) az account set d481e123-9363-4712-ab98-c00d9675c071
-	3) az ad sp create-for-rbac --name cloudAciBootcamp --role=Contributor
+	1) az login -u azusername@domain -p blah  (or just az login) <br>
+	2) az account set d481e123-9363-4712-ab98-c00d9675c071 <br>
+	3) az ad sp create-for-rbac --name cloudAciBootcamp --role=Contributor <br>
 	
 	{
 	  "appId": "blah",
