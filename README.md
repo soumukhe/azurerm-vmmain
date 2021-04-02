@@ -24,7 +24,7 @@
 
 #  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secrets for AZ Service Principal
 
-# The below envorionment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally, define then as local env variables.  This is the case if you are using PFX certificates for AZ Service Principal
+# The below envorionment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally, define them as local env variables.  This is the case if you are using PFX certificates for AZ Service Principal
 export ARM_CLIENT_ID="" <br>
 export ARM_CLIENT_CERTIFICATE_PATH=""    # this needs to point to wherever you have the pfx certificate stored in your local machine.  e.g. export ARM_CLIENT_CERTIFICATE_PATH="/home/aciadmin/Terraform/certs/temp/service-principal.pfx" <br>
 export ARM_CLIENT_CERTIFICATE_PASSWORD=""  # this needs to match the password that you entered while creating the PFX certificate.  Please see How to below.  (step 3 on PFX cert creation) <br>
