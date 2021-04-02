@@ -1,0 +1,20 @@
+#  Local .terraform directories
+**/.terraform/*
+# .tfstate files
+*.tfstate
+
+*.tfstate.*
+# .tfvars files
+#*.tfvars
+
+# lock files
+.terraform.lock.hcl
+
+#
+# no creds
+*.pem
+
+# terraformrc file
+terraform.rc
+
+
