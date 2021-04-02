@@ -1,7 +1,7 @@
 
-#Variables Required
-#---------------------
- # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud)
+#Variables Required <br>
+#--------------------- <br>
+ # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud) <br>
  resgrp         = var.resgrp   # resource group name <br>
  region         = var.region <br>
  resgrptag      = var.resgrptag <br>
@@ -43,8 +43,8 @@ export ARM_SUBSCRIPTION_ID="" <br>
 
 #  How to create PFX certificate or how to create client certificate in Azure for Service Principal
 
-#Required for Terraform if using PFX certificates:
-#---------------------------------------------------------------
+#Required for Terraform if using PFX certificates: <br>
+#--------------------------------------------------------------- <br>
 	1) create key and generate a certificate signing request (CSR) using that key
 openssl req -newkey rsa:4096 -nodes -subj '/CN=sp/O=sp.com/C=US' -keyout "service-principal.key" -out "service-principal.csr"
 
@@ -78,8 +78,8 @@ Object ID: blah <br>
 	6) Now go to subscription/IAM and add Role for Terraform1 to be contributer ( you will have to type in "Terraform1" in the Select field for it to show up.
 
 
-#Required for Terraform if using Client Secrets:
-#----------------------------------------------------------------
+#Required for Terraform if using Client Secrets: <br>
+#---------------------------------------------------------------- <br>
 	1) az login -u azusername@domain -p blah  (or just az login)
 	2) az account set d481e123-9363-4712-ab98-c00d9675c071
 	3) az ad sp create-for-rbac --name cloudAciBootcamp --role=Contributor
