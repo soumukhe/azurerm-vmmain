@@ -92,3 +92,14 @@ Object ID: blah <br>
 	  "tenant": "blah"
 	}
 
+if using Terraform Cloud, make sure to change the backend.tf contents to the TF Cloud workspace name.  Also make sure to put the credentials block in $HOME/.terraform.d/credentials.tfrc.json   file like below: <br>
+
+root@workstation:~/.terraform.d# cat credentials.tfrc.json  <br>
+{
+  "credentials": {
+    "app.terraform.io": {
+      "token": "token_from_terraform_cloud"
+    }
+  }
+}
+
