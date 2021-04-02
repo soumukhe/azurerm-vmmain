@@ -2,8 +2,8 @@
 #Variables Required
 #---------------------
  # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud)
- resgrp         = var.resgrp   # resource group name <br/>
- region         = var.region <br/>
+ resgrp         = var.resgrp   # resource group name <br>
+ region         = var.region <br>
  resgrptag      = var.resgrptag <br/>
  vnet           = var.vnet <br/>
  cidr           = var.cidr # ["10.0.1.0/16"] <br/>
