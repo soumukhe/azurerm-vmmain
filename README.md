@@ -1,7 +1,7 @@
 
 #Variables Required <br>
 #--------------------- <br>
- # variable usage  (these variables need to be defined in terraform.tfvars or in azure-cloud) <br>
+ # variable usage  (these variables need to be defined in terraform.tfvars (running locally or in TF Cloud local execution mode)  or in azure-cloud (running remote execution mode ) <br>
  resgrp         = var.resgrp   # resource group name <br>
  region         = var.region <br>
  resgrptag      = var.resgrptag <br>
@@ -24,7 +24,7 @@
 
 #  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secrets for AZ Service Principal
 
-# The below envorionment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally, define them as local env variables.  This is the case if you are using PFX certificates for AZ Service Principal
+# The below envorionment variables need to be defined locally when running locally or in TF Cloud local execution mode.  
 export ARM_CLIENT_ID="" <br>
 export ARM_CLIENT_CERTIFICATE_PATH=""    # this needs to point to wherever you have the pfx certificate stored in your local machine.  e.g. export ARM_CLIENT_CERTIFICATE_PATH="/home/aciadmin/Terraform/certs/temp/service-principal.pfx" <br>
 export ARM_CLIENT_CERTIFICATE_PASSWORD=""  # this needs to match the password that you entered while creating the PFX certificate.  Please see How to below.  (step 3 on PFX cert creation) <br>
@@ -81,8 +81,8 @@ Object ID: blah <br>
 #Required for Terraform if using Client Secrets: <br>
 #---------------------------------------------------------------- <br>
 	1) az login -u azusername@domain -p blah  (or just az login) <br>
-	2) az account set d481e123-9363-4712-ab98-c00d9675c071 <br>
-	3) az ad sp create-for-rbac --name cloudAciBootcamp --role=Contributor <br>
+	2) az account set -s acct_subscription_id<br>
+	3) az ad sp create-for-rbac --name cloudAciBootcamp --role=Contributor <br>  # here the name of the Service Principal is cloudAciBootcamp
 	
 	{
 	  "appId": "blah",
