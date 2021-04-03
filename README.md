@@ -1,7 +1,8 @@
 
+# Use this only for execting locally or for tf-cloud local mode execution <br>
 #Variables Required <br>
 #--------------------- <br>
- # variable usage  (these variables need to be defined in terraform.tfvars (running locally or in TF Cloud local execution mode)  or in azure-cloud (running remote execution mode ) <br>
+ # variable usage  (these variables need to be defined in terraform.tfvars (running locally or in TF Cloud local execution mode)  <br>
  resgrp         = var.resgrp   # resource group name <br>
  region         = var.region <br>
  resgrptag      = var.resgrptag <br>
@@ -34,7 +35,7 @@ export ARM_TENANT_ID="" #  this is the Directory / Tenant ID <br>
 # OR
 
 
-# The Below environment variables need to be defined in Terraform Cloud if running this from Terraform Cloud.  If running locally,define as local env variables.  This is the case if you are using client certificates for AZ Service Principal
+# The Below environment variables need to be defined in Terraform Cloud if running this from Terraform Cloud (with local execution mode.  If running locally,define as local env variables.  This is the case if you are using client certificates for AZ Service Principal
 export ARM_CLIENT_ID="" <br>
 export ARM_CLIENT_SECRET="" <br>
 export ARM_TENANT_ID="" <br>
