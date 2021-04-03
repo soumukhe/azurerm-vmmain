@@ -2,7 +2,7 @@
 # Use this only for execting locally or for tf-cloud local mode execution <br>
 #Variables Required <br>
 #--------------------- <br>
- # variable usage  (these variables need to be defined in terraform.tfvars (running locally or in TF Cloud local execution mode)  <br>
+ # variable usage  (these variables are defined in terraform.tfvars (running locally or in TF Cloud local execution mode). You can change the values as you need  <br>
  resgrp         = var.resgrp   # resource group name <br>
  region         = var.region <br>
  resgrptag      = var.resgrptag <br>
@@ -22,7 +22,7 @@
  adminUser      = var.adminUser      # "azureuser" <br>
  privKey        = var.privKey  <br>
 
-
+# you also need to define env variables
 #  Environment Variables Required Depends on if you are using PFX Certificates or if you are using Client Secrets for AZ Service Principal
 
 # The below envorionment variables need to be defined locally when running locally or in TF Cloud local execution mode.  
