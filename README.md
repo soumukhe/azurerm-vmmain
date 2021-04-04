@@ -1,5 +1,8 @@
 
-# Use this only for execting locally or for tf-cloud local mode execution <br>
+# Use this only for executing locally or for tf-cloud local mode execution <br>
+
+This will install a Ubuntu Bionic 18.04 VM on a desired vNET on Desired Resource Group.  It will also update everything in the VM and then install docker / docker-compose and bring up a free-radius server ready to be used.   It will display the keys, IP and username needed to ssh into the VM.  Once SSH'd in, you will see how to configure avPairs for the Radius Container in the README file there.
+
 #Variables Required <br>
 #--------------------- <br>
  # variable usage  (these variables are defined in terraform.tfvars (running locally or in TF Cloud local execution mode). You can change the values as you need  <br>
